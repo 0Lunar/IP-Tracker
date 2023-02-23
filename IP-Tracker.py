@@ -1,6 +1,7 @@
 import os, src.banner, src.iptrack, src.help
 try:
     import requests
+    from colorama import Fore
 except:
     print("first install the requirements")
 
@@ -10,7 +11,7 @@ if __name__ == "__main__":
     src.banner.banner()
     while(option != 4):
         try:
-            option = int(input("\n Track ==> "))
+            option = int(input(Fore.RED + "\n Track ==> "))
             if(option == 1):
                 myip = requests.get("https://api.ipify.org").text
                 src.iptrack.ip(myip)

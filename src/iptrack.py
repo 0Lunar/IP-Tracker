@@ -1,11 +1,12 @@
 from requests import get
+from colorama import Fore
 
 def ip(ipaddr):
     TRACKER = "http://ip-api.com/json/" + ipaddr
     data = get(TRACKER).json()
     if(data['status'] == "success"):
-        print("\n IP INFO:\n")
-        print("\n [IP Adress] " + data['query'])
+        print(Fore.RED + "\n IP INFO:\n")
+        print(Fore.YELLOW + "\n [IP Adress] " + data['query'])
         print(" [Country Code] " + data['countryCode'])
         print(" [Country] " + data['country'])
         print(" [Region Code] " + data['region'])

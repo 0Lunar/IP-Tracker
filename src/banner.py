@@ -1,5 +1,7 @@
+from colorama import Fore
+
 def banner():
-    print('''                          _____                          
+    print(Fore.YELLOW + '''                          _____                          
                    _.+sd$$$$$$$$$bs+._                   
                .+d$$$$$$$$$$$$$$$$$$$$$b+.               
             .sd$$$$$$$P^*^T$$$P^*"*^T$$$$$bs.            
